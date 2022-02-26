@@ -17,7 +17,7 @@ namespace AzureExamples
         
         public void OnGet()
         {
-            this.SimpleSetting = this._configuration["appSetting"];
+            this.SimpleSetting = this._configuration["simpleSetting"];
             this.NestedSetting= this._configuration["nestedSetting:levelOne:levelTwo"];
 
         }
