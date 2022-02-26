@@ -12,14 +12,13 @@ namespace AzureExamples
         public IndexModel(IConfiguration configuration)
         {
             this._configuration = configuration;
+            this.SimpleSetting = this._configuration["simpleSetting"];
+            this.NestedSetting= this._configuration["nestedSetting:levelOne:levelTwo"];
         }
 
         
         public void OnGet()
         {
-            this.SimpleSetting = this._configuration["simpleSetting"];
-            this.NestedSetting= this._configuration["nestedSetting:levelOne:levelTwo"];
-
         }
     }
 }
