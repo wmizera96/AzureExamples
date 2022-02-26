@@ -7,15 +7,9 @@
 
 <h1>Data</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Customers[0].NameStyle)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Customers[0].Title)
             </th>
@@ -44,15 +38,6 @@
                 @Html.DisplayNameFor(model => model.Customers[0].Phone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].PasswordHash)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customers[0].PasswordSalt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customers[0].Rowguid)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Customers[0].ModifiedDate)
             </th>
             <th></th>
@@ -61,9 +46,6 @@
     <tbody>
 @foreach (var item in Model.Customers) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NameStyle)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -92,21 +74,7 @@
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PasswordHash)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PasswordSalt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rowguid)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.ModifiedDate)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.CustomerId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CustomerId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CustomerId">Delete</a>
             </td>
         </tr>
 }
