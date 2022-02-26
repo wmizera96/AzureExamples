@@ -8,7 +8,6 @@ builder.Services.AddSingleton<ExampleDatabaseContext>();
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
 app.UseRouting();
 app.MapRazorPages();
 
