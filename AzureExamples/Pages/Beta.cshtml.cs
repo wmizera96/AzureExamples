@@ -1,9 +1,6 @@
 using AzureExamples.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.FeatureManagement;
-using Microsoft.FeatureManagement.Mvc;
 
 namespace AzureExamples.Pages
 {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 using Microsoft.FeatureManagement;
 
 namespace AzureExamples.Infrastructure
@@ -19,6 +20,8 @@ namespace AzureExamples.Infrastructure
         public virtual async Task OnPageHandlerExecutionAsync(PageHandlerExecutingContext context, PageHandlerExecutionDelegate next)
         {
             var featureManager = context.HttpContext.RequestServices.GetRequiredService<IFeatureManagerSnapshot>();
+            var configRefresher = context.HttpContext.RequestServices.GetRequiredService<IConfigurationRefresher>();
+            await configRefresher.RefreshAsync();
 
             foreach(var feature in Features)
             {
