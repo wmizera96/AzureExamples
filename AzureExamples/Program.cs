@@ -10,11 +10,10 @@ builder.Services.AddFeatureManagement();
 builder.Configuration.AddAzureAppConfiguration(opt =>
 {
     var connectionString = builder.Configuration.GetConnectionString("AppConfig");
-    opt.Connect(connectionString);
-    opt.UseFeatureFlags(options => {
-        options.CacheExpirationInterval = TimeSpan.FromSeconds(1);
-        }
-    );
+    opt.Connect(connectionString).ConfigureRefresh(refresh => {
+        refresh.Register("ConnectionStrings:AppConfig").SetCacheExpiration(TimeSpan.FromSeconds(5));
+        });
+    opt.UseFeatureFlags();
 });
 
 var app = builder.Build();
