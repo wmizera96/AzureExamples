@@ -6,7 +6,11 @@
     <title>Example app</title>
 </head>
 <body>
-    @Html.Partial("Navigation")
+    @await Html.PartialAsync("Navigation")
+    <div style="border: 1px solid red">
+
+    <partial asp-action="Navigation"/>
+    </div>
     <div>
         @RenderBody()
     </div>

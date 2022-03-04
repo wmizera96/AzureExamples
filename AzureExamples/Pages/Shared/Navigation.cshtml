@@ -1,6 +1,14 @@
-﻿<nav>
+﻿@inject Microsoft.FeatureManagement.IFeatureManager featureManager
+
+
+
+<nav>
     <a asp-page="Index">Home</a>
     |
     <a asp-page="Data">Data</a>
+    |
+    <feature name="Beta">
+        <a asp-page="Beta">Beta</a>
+    </feature>
 </nav>
 <hr/>
