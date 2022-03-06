@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureExamples", "AzureExamples\AzureExamples.csproj", "{3CF365FB-4E32-422D-A601-DA4592573CB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobStorageExample", "BlobStorageExample\BlobStorageExample.csproj", "{4D6F9A1E-9D8D-4E43-BD62-D5163A25725E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3CF365FB-4E32-422D-A601-DA4592573CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CF365FB-4E32-422D-A601-DA4592573CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CF365FB-4E32-422D-A601-DA4592573CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6F9A1E-9D8D-4E43-BD62-D5163A25725E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6F9A1E-9D8D-4E43-BD62-D5163A25725E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6F9A1E-9D8D-4E43-BD62-D5163A25725E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6F9A1E-9D8D-4E43-BD62-D5163A25725E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
