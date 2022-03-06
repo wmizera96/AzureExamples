@@ -1,14 +1,26 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Azure.Storage.Blobs;
+using BlobStorageExample;
 using Microsoft.Extensions.Configuration;
 
-Console.WriteLine("Hello, World!");
 
-var config = new ConfigurationBuilder()
+var configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json")
     .AddUserSecrets<Program>()
     .Build();
 
 
-Console.WriteLine($"[{config["ConnectionStrings:BlobStorage"]}]");
+var blobClient = new BlobServiceClient(configuration["ConnectionStrings:BlobStorage"]);
+
+var guid = "b0175793-9c42-4a2f-a00d-eeffd5335621";
+
+
+await Operations.CreateContainer(blobClient, $"wmizera-container-{guid}");
+
+
+Console.WriteLine("Container created");
+
+
+
+
 
